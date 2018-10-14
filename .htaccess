@@ -1,0 +1,17 @@
+
+
+## Reecriture d'url
+
+
+RewriteEngine On
+
+
+
+## entree :  /sentierslangeaisien redirige vers /sentierslangeaisien/src/Public
+## entree :  /sentierslangeaisien/index redirige vers /sentierslangeaisien/src/Public/index.php
+
+RewriteBase /sentierslangeaisien/src/Public/
+
+rewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?page=$1 [L]
+

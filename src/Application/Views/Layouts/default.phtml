@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="<?= WEB_ROOT; ?>css/materialize.min.css"/>
+        <link rel="icon"  href="<?php echo WEB_ROOT ?>img/logo.ico" />
+        <link rel="stylesheet" type="text/css" href="<?= WEB_ROOT; ?>css/styles.css"> 
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>   
+        <header>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-header">
+                    <h3>Connexion</h3>
+                </div>
+                <div class="modal-content">
+                    <form action="<?= LINK_ROOT; ?>user/connexion" method="post" >
+
+                        <div class="input-field col s4">
+                            <input id="txtlogin" type="text" name="txtlogin" id="txtlogin" required >
+                            <label for="txtlogin">Pseudo ou Email : </label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input id="txtMdp" type="password" name="txtMdp" id="txtMdp" required >
+                            <label for="txtMdp">Mot de Passe : </label>
+                        </div>
+                        <button id="connexionbtn" class="btn waves-effect waves-light" type="submit" name="action" id="action">Validez
+
+                        </button>
+                        <p><a href="<?= LINK_ROOT; ?>user/resetpswd"><i>Mot de passe oublié ?</i></a></p>
+                    </form>
+                    <?php
+                    $erreurs = [];
+                    if (count($erreurs) > 0) {
+                        echo "<ul>";
+                        foreach ($erreurs as $value) {
+                            echo "<li class='row col s12'>{$value}</li>";
+                        }
+                        echo "</ul>";
+                    }
+                    ?>
+                </div>
+
+            </div>
+
+            <ul id="menu1" class="dropdown-content" style="position:relative;">
+                <li><a href="<?= LINK_ROOT; ?>#">Accueil</a></li>
+                <li class="divider"></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Présentation</a></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Dossiers</a></li>
+                <li class="divider"></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Historique</a></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Galeries de photos</a></li>
+            </ul>
+            <ul id="menu2" class="dropdown-content" style="position:relative;">
+                <li><a href="<?= LINK_ROOT; ?>#">Rando Gadoue</a></li>
+                <li class="divider"></li>
+                <li><a href="<?= LINK_ROOT; ?>#">La Déval'Verte</a></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Rando des Troglodytes</a></li>
+                <li class="divider"></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Accès</a></li>
+            </ul>
+            <ul id="menu3" class="dropdown-content" style="position:relative;">
+                <li><a href="<?= LINK_ROOT; ?>#">Présentation</a></li>
+                <li class="divider"></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Calendrier</a></li>
+                <li class="divider"></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Photos</a></li>
+            </ul>
+            <ul id="menu4" class="dropdown-content" style="position:relative;">
+                <li><a href="<?= LINK_ROOT; ?>#">Présentation</a></li>
+                <li class="divider"></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Agenda</a></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Photos</a></li>
+            </ul>
+            <ul id="menu5" class="dropdown-content" style="position:relative;">
+                <li><a href="<?= LINK_ROOT; ?>#">Circuits balisés</a></li>
+                <li class="divider"></li>
+                <li><a href="<?= LINK_ROOT; ?>#">Traces GPS</a></li>
+            </ul>
+
+            
+            
+
+            
+
+
+
+            <div class="banner center-align">
+                <a href="<?php echo LINK_ROOT ?>home"> <img class=" responsive-img" src="<?php echo WEB_ROOT ?>img/banniere.jpg"></a>
+            </div>
+            <div id="navbar-fixed" class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper nav-text-centered">
+                    <ul data-target="mobile-demo" id="nav-mobile" class=" hide-on-med-and-down">
+                        <li><a class='dropdown-trigger' data-target="menu1" href="#!">L'association</a></li>
+                        <li><a class='dropdown-trigger' data-target="menu2" href="#!">Organisations</a></li>
+                        <li><a class='dropdown-trigger' data-target="menu3" href="#!">Section pédestre</a></li>
+                        <li><a class='dropdown-trigger' data-target="menu4" href="#!">Section VTT</a></li>
+                        <li><a class='dropdown-trigger' data-target="menu5" href="#!">Circuits</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+
+
+
+
+          <!--  <div class="navbar">
+                <nav>
+                    <div class="nav-wrapper ">
+                        <a href="#" data-target="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul data-target="mobile-demo" id="nav-mobile" class=" hide-on-med-and-down">
+                            <li><a href='<?php echo LINK_ROOT; ?>#'>L'association</a></li>
+                            <li><a href='<?php echo LINK_ROOT; ?>#'>Organisations</a></li>
+                            <li><a href='<?php echo LINK_ROOT; ?>#'>Section pédestre</a></li>
+                            <li><a class='dropdown-trigger' data-target="menu1" href="#!">dropdown menu</a></li>
+                            <li><a href='<?php echo LINK_ROOT; ?>#'>Section VTT</a></li>
+                            <li><a href='<?php echo LINK_ROOT; ?>#'>Circuits</a></li>
+                        </ul>
+                        <ul class="right hide-on-med-and-down"> 
+                            <?php
+                                ?>
+                                <li><a class="dropdown-trigger" data-target="dropdown1" href="#!"><i class="material-icons left">account_circle</i>Authentification</a></li>
+                                <?php
+                            ?>
+                           </ul>
+                        <ul class="sidenav" id="mobile-demo">
+                            <li><a href='<?php echo LINK_ROOT; ?>catalogue/console'>Console</a></li>
+                            <li><a href='<?php echo LINK_ROOT; ?>catalogue/jeux-video'>Jeux vidéo</a></li>
+                            <li><a href='<?php echo LINK_ROOT; ?>catalogue/accessoire'>Accessoires</a></li>
+                            <li><a href='<?php echo LINK_ROOT; ?>catalogue/produit-derive'>Produits Dérivés</a></li>
+                            <li class='dropdown-trigger'><a href="<?php echo LINK_ROOT; ?>user/inscription"><i class="material-icons left">account_circle</i>Compte</a></li>
+                            <li><a href="<?php echo LINK_ROOT; ?>panier"><i class="material-icons left">shopping_cart</i> Mon panier </a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div> -->
+        </header>
+        <main>
+
+            <div id="global" class="container">
+                <section>
+                    <article class="bg-sentiers">
+                        <?php
+                        echo $viewContent;
+                        ?>	
+                    </article>
+                </section>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <div class="footer-menu">
+                <a href="#">Liens</a>
+                <a href="#">Contact</a>
+                <a href="#">Mentions légales</a>
+            </div>
+        </footer>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="<?php echo WEB_ROOT ?>js/materialize.min.js"></script>
+        <script type="text/javascript" src="<?php echo WEB_ROOT ?>js/javascript.js"></script>
+    </body>
+</html>
