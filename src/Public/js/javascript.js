@@ -30,7 +30,14 @@ $(window).scroll(function(){
         $('#navbar-fixed').removeClass('navbar-fixed');
     }
 });
-
+$(document).ready(function(){
+    if ($(window).scrollTop() >= 102) {
+        $('#navbar-fixed').addClass('navbar-fixed');
+    }
+    else {
+        $('#navbar-fixed').removeClass('navbar-fixed');
+    }
+});
 
 
 
