@@ -14,6 +14,26 @@ class Organisations extends \Library\Controller\Controller
     {
         $this->setDataView(array('pageTitle' => 'Home - Index'));
     }
+
+    public function randoGadoue()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function laDevalVerte()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function RandoTroglodytes()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function acces()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
 }
 
 ?>

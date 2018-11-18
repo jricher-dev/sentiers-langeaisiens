@@ -19,6 +19,21 @@ class Association extends \Library\Controller\Controller
     {
         $this->setDataView(array('pageTitle' => 'Home - Index'));
     }
+
+    public function dossiers()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function historique()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function galeriesPhotos()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
 }
 
 ?>

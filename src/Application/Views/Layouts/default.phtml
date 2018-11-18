@@ -15,75 +15,40 @@
 
     <body>   
         <header>
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-                <div class="modal-header">
-                    <h3>Connexion</h3>
-                </div>
-                <div class="modal-content">
-                    <form action="<?= LINK_ROOT; ?>user/connexion" method="post" >
-
-                        <div class="input-field col s4">
-                            <input id="txtlogin" type="text" name="txtlogin" id="txtlogin" required >
-                            <label for="txtlogin">Pseudo ou Email : </label>
-                        </div>
-                        <div class="input-field col s4">
-                            <input id="txtMdp" type="password" name="txtMdp" id="txtMdp" required >
-                            <label for="txtMdp">Mot de Passe : </label>
-                        </div>
-                        <button id="connexionbtn" class="btn waves-effect waves-light" type="submit" name="action" id="action">Validez
-
-                        </button>
-                        <p><a href="<?= LINK_ROOT; ?>user/resetpswd"><i>Mot de passe oublié ?</i></a></p>
-                    </form>
-                    <?php
-                    $erreurs = [];
-                    if (count($erreurs) > 0) {
-                        echo "<ul>";
-                        foreach ($erreurs as $value) {
-                            echo "<li class='row col s12'>{$value}</li>";
-                        }
-                        echo "</ul>";
-                    }
-                    ?>
-                </div>
-
-            </div>
-
             <ul id="menu1" class="dropdown-content" style="position:relative;">
                 <li><a href="<?= LINK_ROOT; ?>">Accueil</a></li>
                 <li class="divider"></li>
                 <li><a href="<?= LINK_ROOT; ?>association/presentation">Présentation</a></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Dossiers</a></li>
+                <li><a href="<?= LINK_ROOT; ?>association/dossiers">Dossiers</a></li>
                 <li class="divider"></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Historique</a></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Galeries de photos</a></li>
+                <li><a href="<?= LINK_ROOT; ?>association/historique">Historique</a></li>
+                <li><a href="<?= LINK_ROOT; ?>association/galeriesPhotos">Galeries de photos</a></li>
             </ul>
             <ul id="menu2" class="dropdown-content" style="position:relative;">
-                <li><a href="<?= LINK_ROOT; ?>#">Rando Gadoue</a></li>
+                <li><a href="<?= LINK_ROOT; ?>organisations/randoGadoue">Rando Gadoue</a></li>
                 <li class="divider"></li>
-                <li><a href="<?= LINK_ROOT; ?>#">La Déval'Verte</a></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Rando des Troglodytes</a></li>
+                <li><a href="<?= LINK_ROOT; ?>organisations/laDevalVerte">La Déval'Verte</a></li>
+                <li><a href="<?= LINK_ROOT; ?>organisations/randoTroglodytes">Rando des Troglodytes</a></li>
                 <li class="divider"></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Accès</a></li>
+                <li><a href="<?= LINK_ROOT; ?>organisations/acces">Accès</a></li>
             </ul>
             <ul id="menu3" class="dropdown-content" style="position:relative;">
-                <li><a href="<?= LINK_ROOT; ?>#">Présentation</a></li>
+                <li><a href="<?= LINK_ROOT; ?>pedestre/presentation">Présentation</a></li>
                 <li class="divider"></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Calendrier</a></li>
+                <li><a href="<?= LINK_ROOT; ?>pedestre/calendrier">Calendrier</a></li>
                 <li class="divider"></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Photos</a></li>
+                <li><a href="<?= LINK_ROOT; ?>pedestre/photos">Photos</a></li>
             </ul>
             <ul id="menu4" class="dropdown-content" style="position:relative;">
-                <li><a href="<?= LINK_ROOT; ?>#">Présentation</a></li>
+                <li><a href="<?= LINK_ROOT; ?>vtt/presentation">Présentation</a></li>
                 <li class="divider"></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Agenda</a></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Photos</a></li>
+                <li><a href="<?= LINK_ROOT; ?>vtt/agenda">Agenda</a></li>
+                <li><a href="<?= LINK_ROOT; ?>vtt/photos">Photos</a></li>
             </ul>
             <ul id="menu5" class="dropdown-content" style="position:relative;">
-                <li><a href="<?= LINK_ROOT; ?>#">Circuits balisés</a></li>
+                <li><a href="<?= LINK_ROOT; ?>circuits/circuitsBalises">Circuits balisés</a></li>
                 <li class="divider"></li>
-                <li><a href="<?= LINK_ROOT; ?>#">Traces GPS</a></li>
+                <li><a href="<?= LINK_ROOT; ?>circuits/tracesGPS">Traces GPS</a></li>
             </ul>
 
             
@@ -160,11 +125,20 @@
             </div>
         </main>
         <footer class="page-footer">
-            <div class="footer-menu">
-                <a href="#">Liens</a>
-                <a href="#">Contact</a>
-                <a href="#">Mentions légales</a>
-            </div>
+            <nav class="footer-nav">
+                <div class="nav-text-centered">
+                    <ul data-target="mobile-demo" id="nav-mobile" class="hide-on-med-and-down">
+                        <li><a href="<?= LINK_ROOT; ?>home/liens">Liens</a></li>
+                        <li><a href="<?= LINK_ROOT; ?>home/contact">Contact</a></li>
+                        <li><a href="<?= LINK_ROOT; ?>home/mentionsLegales">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </nav>
+           <!-- <div class="footer-menu">
+                <a href="<?= LINK_ROOT; ?>home/liens">Liens</a>
+                <a href="<?= LINK_ROOT; ?>home/contact">Contact</a>
+                <a href="<?= LINK_ROOT; ?>home/mentionsLegales">Mentions légales</a>
+            </div>-->
         </footer>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

@@ -14,6 +14,15 @@ class Circuits extends \Library\Controller\Controller
     {
         $this->setDataView(array('pageTitle' => 'Home - Index'));
     }
-}
 
+    public function circuitsBalises()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function tracesGPS()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+}
 ?>

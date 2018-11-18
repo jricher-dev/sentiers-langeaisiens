@@ -14,6 +14,21 @@ class Vtt extends \Library\Controller\Controller
     {
         $this->setDataView(array('pageTitle' => 'Home - Index'));
     }
+
+    public function presentation()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function agenda()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function photos()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
 }
 
 ?>
