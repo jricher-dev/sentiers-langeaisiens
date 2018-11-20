@@ -11,8 +11,6 @@ abstract class Model
 
     public function __construct($connexionName = null)
     {
-        //$classConnexion = \Library\Model\Connexion::getInstance();
-        //$this->database = $classConnexion::getConnexion($connexionName);
     }
 
 }

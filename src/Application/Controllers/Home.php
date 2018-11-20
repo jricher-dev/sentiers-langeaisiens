@@ -15,6 +15,16 @@ class Home extends \Library\Controller\Controller
         $this->setDataView(array('pageTitle' => 'Home - Index'));
     }
 
+    public function liens()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
+    public function mentionsLegales()
+    {
+        $this->setDataView(array('pageTitle' => 'Home - Index'));
+    }
+
     public function contact()
     {
         $emailSend = false;
@@ -24,32 +34,22 @@ class Home extends \Library\Controller\Controller
             $nom = $_POST['nom'];
             $prenom = $_POST['prenom'];
             $subject = $_POST['motif'];
-            $message = $_POST['message'];
+            $message = "Message de : ". $_POST['nom'] . " " . $_POST['prenom'] . "<br>" . $_POST['message'];
 
-            if ($this->sendEmailUtf8($to, $nom . $prenom, $from, $subject, $message) == false) {
+            if ($this->sendEmailUtf8($to, $from, $subject, $message) == false) {
                 $emailSend = true;
             }
         }
         $this->setDataView(array('emailSend' => $emailSend));
     }
 
-    function sendEmailUtf8($to, $from_user, $from_email, $subject = '(No subject)', $message = '')
+    function sendEmailUtf8($to, $from_email, $subject = '(No subject)', $message = '')
     {
-        
         $headers = 'From: ' . $from_email . "\r\n" .
         'Reply-To: ' . $from_email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
         mail($to, $subject, $message, $headers);
-
-        /*
-        $from_user = "=?UTF-8?B?" . base64_encode($from_user) . "?=";
-        $subject = "=?UTF-8?B?" . base64_encode($subject) . "?=";
-
-        $headers = "From: $from_user <$from_email>\r\n" .
-        "MIME-Version: 1.0" . "\r\n" .
-        "Content-type: text/html; charset=UTF-8" . "\r\n";
-        return false;*/
     }
 }
 
