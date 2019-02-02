@@ -2,17 +2,17 @@
 $infos = $this->getDataView();
 if (count($_POST) > 0) {
     ?>
-    <div class="message">
-        <div class="row">
-            <div class="col s6 offset-s3">
-                <div class="card-panel teal green accent-3 center-align">Message envoyé avec succès</div>
+<div class="message">
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <div class="card-panel teal green accent-3 center-align">Message envoyé avec succès</div>
 
-            </div>
         </div>
     </div>
-<?php }
+</div>
+<?php 
+}
 ?>
-
 <div class="title">
     <div class="row">
         <div class="header col s12 l12 m12">
@@ -21,20 +21,20 @@ if (count($_POST) > 0) {
     </div>
 </div>
 <div class="section">
-    <form action="" method="post" >
+    <form action="" method="post">
         <div class="row">
-            <div class="col s8 offset-s3">      
+            <div class="col s8 offset-s3">
                 <div class="row">
                     <div class="col s4">
                         <span>Nom :</span>
                         <div class="input-field ">
-                            <input  id="nom" type="text" name="nom" required>
-                        </div> 
+                            <input id="nom" type="text" name="nom" required>
+                        </div>
                     </div>
                     <div class="col s4">
                         <span>Prenom :</span>
                         <div class="input-field ">
-                            <input id="prenom" type="text" name="prenom" required>               
+                            <input id="prenom" type="text" name="prenom" required>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ if (count($_POST) > 0) {
                     <div class="col s8">
                         <span>Vôtre email :</span>
                         <div class="input-field">
-                            <input id="email" type="email" name="email" required>               
+                            <input id="email" type="email" name="email" required>
                         </div>
                     </div>
                 </div>
@@ -50,22 +50,23 @@ if (count($_POST) > 0) {
                     <div class="col s8">
                         <span>Motif de votre message :</span>
                         <div class="input-field">
-                            <input id="motif" type="text" name="motif" required>               
+                            <input id="motif" type="text" name="motif" required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s8">
                         <span>Votre message :</span>
-                        <textarea id="message" name="message" class="materialize-textarea" required></textarea>               
+                        <textarea id="message" name="message" class="materialize-textarea" required></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s4  offset-s2 center">
-                        <button id="connexionbtn" class="btn waves-effect waves-light s2 center" type="submit" name="action" id="action">Envoyer</button>
+                        <button id="connexionbtn" class="btn waves-effect waves-light s2 center" type="submit" name="action"
+                            id="action">Envoyer</button>
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
     </form>
 </div>
